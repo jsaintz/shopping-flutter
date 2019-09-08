@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/pages/home.page.dart';
+import 'package:shopping/pages/signUp.page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -49,7 +51,14 @@ class LoginPage extends StatelessWidget {
                           ),
                           FlatButton(
                             child: Text("Sign Up"),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignUpPage(),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),
@@ -105,9 +114,16 @@ class LoginPage extends StatelessWidget {
                         ),
                         child: FlatButton(
                           child: Text("Sign In"),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ),
+                            );
+                          },
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -127,12 +143,10 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Colors.blue,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),
-                  color: Colors.blue,
                 ),
                 child: FlatButton(
                   child: Row(
@@ -159,12 +173,10 @@ class LoginPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 2.0,
-                    color: Colors.red,
                   ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),
-                  color: Colors.red,
                 ),
                 child: FlatButton(
                   child: Row(
